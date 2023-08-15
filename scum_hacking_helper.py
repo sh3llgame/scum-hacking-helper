@@ -175,36 +175,8 @@ def main():
             break
 
 
-
 if __name__ == "__main__":
-
-    #main()
-
-
-    test_cases = [
-        ("240,190,60", "-40,/2,*2,/2, ,/2,-10, ", "/2,*2,*2,*2,*2,+40, ,/2")
-
-    ]
-    """,
-            ("200,40,400", "*2,/2,/2,+100, , ,-60,+40", "-20,*2, , ,-60,-10,*2,/2")"""
-    for testcase in test_cases:
-        # Create a fake input stream
-        fake_input = testcase[0] + "\n" + testcase[1] + "\n" + testcase[2] + "\n" + "y\n"
-    # Test the cases with the fake input stream
-        with io.StringIO(fake_input) as fake_in:
-            # save the original stdin and stdout
-            original_in = sys.stdin
-            sys.stdin = fake_in
-
-            # Run the main function
-            main()
-
-            # Restore the original stdin and stdout
-            sys.stdin = original_in
-
-            # Get the output
-            output = fake_in.getvalue()
-            print(output)
+    main()
 
 
 
